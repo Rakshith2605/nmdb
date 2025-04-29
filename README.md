@@ -13,17 +13,6 @@ A Python library for connecting to and querying databases using the OpenAI API a
 ## Installation
 
 ```bash
-# Clone the repository
-git clone https://github.com/yourusername/mcp_lib.git
-cd mcp_lib
-
-# Install the package
-pip install -e .
-```
-
-Or install directly from PyPI (once published):
-
-```bash
 pip install mcp-lib
 ```
 
