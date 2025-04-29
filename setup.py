@@ -9,7 +9,7 @@ setup(
     version="0.1.0",
     description="Model Context Protocol Library for database operations",
     author="Rakshith Dharmappa",
-    author_email="rakshith.d26@outlook.com",
+    author_email="rakshith.officialmail@gmail.com",
     packages=find_packages(),
     python_requires=">=3.8",
     install_requires=[
