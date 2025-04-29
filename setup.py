@@ -6,7 +6,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="nlmdb",  # Using your package name
-    version="0.1.0",
+    version="0.2.0",
     description="Model Context Protocol Library for database operations",
     author="Rakshith Dharmappa",
     author_email="rakshith.officialmail@gmail.com",
