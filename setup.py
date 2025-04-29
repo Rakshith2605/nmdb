@@ -5,7 +5,7 @@ Setup script for the MCP library.
 from setuptools import setup, find_packages
 
 setup(
-    name="nmdb",  # Using your package name
+    name="nlmdb",  # Using your package name
     version="0.1.0",
     description="Model Context Protocol Library for database operations",
     author="Rakshith Dharmappa",
