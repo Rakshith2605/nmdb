@@ -19,7 +19,7 @@ pip install mcp-lib
 ## Quick Start
 
 ```python
-from mcp_lib import Config, DatabaseHandler, DatabaseTools, MCPHandler, create_database_agent
+from nlmdb import Config, DatabaseHandler, DatabaseTools, MCPHandler, create_database_agent
 from openai import OpenAI
 
 # Set up configuration
