@@ -14,7 +14,7 @@ from .agents.agent_factory import create_database_agent
 # Import the simplified API
 from ._api import dbagent
 
-__version__ = "0.1.0"
+__version__ = "0.2.0"
 __all__ = [
     "Config",
     "DatabaseHandler",
