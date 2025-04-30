@@ -1,4 +1,4 @@
-# NLMDB: Natural Language & MCP Database
+# NLMDB: Natural Language Model Database
 
 NLMDB is a Python library that allows you to query databases using natural language through the Model Context Protocol (MCP) approach. The library provides a simple API for interacting with databases using either OpenAI or Hugging Face models.
 
@@ -6,6 +6,7 @@ NLMDB is a Python library that allows you to query databases using natural langu
 
 - Query databases using natural language
 - Support for both OpenAI and Hugging Face models
+- Enhanced privacy options with local Hugging Face models
 - Automatic schema extraction
 - Clean, professional responses
 - Simple, intuitive API
@@ -48,6 +49,33 @@ response = dbagent_private(
 print(response["output"])
 ```
 
+## Privacy and Data Security
+
+NLMDB offers enhanced privacy options through its support for Hugging Face models:
+
+### Enhanced Privacy with Hugging Face Models
+
+When using `dbagent_private` with `use_local=True`, all processing happens locally on your machine, ensuring your database schema and query data never leave your environment:
+
+```python
+response = dbagent_private(
+    hf_config=("your-huggingface-token", "model-repo-name"),
+    db_path="path/to/your/database.db",
+    query="What tables are in the database?",
+    use_local=True  # Ensures all processing happens locally
+)
+```
+
+### Data Security Considerations
+
+- **OpenAI Integration**: When using `dbagent` with OpenAI models, database schema and queries are sent to OpenAI's API. While only schema information and not actual data is shared, consider privacy implications.
+
+- **Hugging Face Cloud API**: Using `dbagent_private` without `use_local=True` sends queries to Hugging Face's Inference API.
+
+- **Local Processing**: For maximum privacy, use `dbagent_private` with `use_local=True` to keep all processing on your machine.
+
+- **No Data Storage**: NLMDB does not store or log your database contents, queries, or responses.
+
 ## Advanced Usage
 
 ### Running with Verbose Output
@@ -65,7 +93,7 @@ response = dbagent(
 
 ### Using Local Hugging Face Models
 
-For improved performance or when working offline, you can run Hugging Face models locally:
+For improved performance, privacy, or when working offline, you can run Hugging Face models locally:
 
 ```python
 response = dbagent_private(
@@ -94,6 +122,27 @@ response = dbagent_private(
     model_kwargs=model_kwargs
 )
 ```
+
+## Choosing the Right Model
+
+### OpenAI Models (dbagent)
+- **Pros**: Higher accuracy, better SQL generation
+- **Cons**: Requires internet connection, sends schema information to OpenAI
+
+### Hugging Face Models (dbagent_private)
+- **Pros**: 
+  - Enhanced privacy when run locally
+  - Works offline when using local models
+  - Open-source options available
+- **Cons**: 
+  - May require significant local resources for larger models
+  - Generally less accurate SQL generation than OpenAI models
+
+### Recommended Hugging Face Models
+For optimal results with `dbagent_private`, we recommend:
+- `mistralai/Mixtral-8x7B-Instruct-v0.1` (Best overall performance)
+- `meta-llama/Llama-2-7b-chat-hf` (Good balance of performance and resource usage)
+- `Qwen/Qwen2-7B-Instruct` (Efficient for simpler queries)
 
 ## Supported Databases
 
