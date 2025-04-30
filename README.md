@@ -1,4 +1,4 @@
-# NLMDB: Natural Language Model Database
+# NLMDB: Natural Language & MCP-powered Database
 
 NLMDB is a Python library that allows you to query databases using natural language through the Model Context Protocol (MCP) approach. The library provides a simple API for interacting with databases using either OpenAI or Hugging Face models.
 
