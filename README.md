@@ -7,7 +7,8 @@
 [![PyPI version](https://img.shields.io/pypi/v/nlmdb.svg)](https://pypi.org/project/nlmdb/)
 [![Python Versions](https://img.shields.io/pypi/pyversions/nlmdb.svg)](https://pypi.org/project/nlmdb/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Downloads](https://static.pepy.tech/badge/nlmdb)](https://pepy.tech/project/nlmdb)
+<!-- [![PyPI Downloads](https://img.shields.io/pypi/dm/nlmdb.svg)](https://pypi.org/project/nlmdb/) -->
+
 
 </div>
 
