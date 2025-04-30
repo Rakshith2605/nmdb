@@ -1,5 +1,8 @@
+README.md
 setup.py
 nlmdb/__init__.py
+nlmdb/_api.py
+nlmdb/_private_api.py
 nlmdb/config.py
 nlmdb.egg-info/PKG-INFO
 nlmdb.egg-info/SOURCES.txt

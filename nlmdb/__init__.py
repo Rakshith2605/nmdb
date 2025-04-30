@@ -13,13 +13,15 @@ from .agents.agent_factory import create_database_agent
 
 # Import the simplified API
 from ._api import dbagent
+from ._private_api import dbagent_private
 
-__version__ = "0.2.0"
+__version__ = "0.1.0"
 __all__ = [
     "Config",
     "DatabaseHandler",
     "DatabaseTools",
     "MCPHandler", 
     "create_database_agent",
-    "dbagent"
+    "dbagent",
+    "dbagent_private"
 ]
