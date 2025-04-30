@@ -1,23 +1,34 @@
 # NLMDB: Natural Language & MCP-powered Database
 
-NLMDB is a Python library that allows you to query databases using natural language through the Model Context Protocol (MCP) approach. The library provides a simple API for interacting with databases using either OpenAI or Hugging Face models.
+<div align="center">
 
-## Features
+![NLMDB Logo](https://img.shields.io/badge/NLMDB-Natural%20Language%20Database-blue?style=for-the-badge&logo=database)
 
-- Query databases using natural language
-- Support for both OpenAI and Hugging Face models
-- Enhanced privacy options with local Hugging Face models
-- Automatic schema extraction
-- Clean, professional responses
-- Simple, intuitive API
+[![PyPI version](https://img.shields.io/pypi/v/nlmdb.svg)](https://pypi.org/project/nlmdb/)
+[![Python Versions](https://img.shields.io/pypi/pyversions/nlmdb.svg)](https://pypi.org/project/nlmdb/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Downloads](https://static.pepy.tech/badge/nlmdb)](https://pepy.tech/project/nlmdb)
 
-## Installation
+</div>
+
+Query your databases using natural language through the Model Context Protocol (MCP) approach. NLMDB provides a simple API for interacting with databases using either OpenAI or Hugging Face models.
+
+## ✨ Features
+
+- 💬 Query databases using natural language
+- 🔄 Support for both OpenAI and Hugging Face models
+- 🔒 Enhanced privacy options with local Hugging Face models
+- 📊 Automatic schema extraction
+- 📝 Clean, professional responses
+- 🧩 Simple, intuitive API
+
+## 🚀 Installation
 
 ```bash
 pip install nlmdb
 ```
 
-## Quick Start
+## 🏁 Quick Start
 
 ### Using OpenAI
 
@@ -49,7 +60,7 @@ response = dbagent_private(
 print(response["output"])
 ```
 
-## Privacy and Data Security
+## 🔒 Privacy and Data Security
 
 NLMDB offers enhanced privacy options through its support for Hugging Face models:
 
@@ -76,7 +87,20 @@ response = dbagent_private(
 
 - **No Data Storage**: NLMDB does not store or log your database contents, queries, or responses.
 
-## Advanced Usage
+## 🔄 Model Comparison
+
+| Feature | OpenAI Models (`dbagent`) | Hugging Face Models (`dbagent_private`) |
+|---------|---------------------------|----------------------------------------|
+| **SQL Generation Quality** | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐ |
+| **Privacy** | ⭐⭐ | ⭐⭐⭐⭐⭐ (with `use_local=True`) |
+| **Cost** | 💰💰💰 | 💰 (self-hosted) / 💰💰 (HF API) |
+| **Offline Usage** | ❌ | ✅ (with `use_local=True`) |
+| **Setup Complexity** | Simple | Moderate |
+| **Resource Requirements** | Minimal (Cloud-based) | High (for local models) |
+| **Speed** | Fast | Varies (depends on hardware) |
+| **Customizability** | Limited | Extensive |
+
+## 🧩 Advanced Usage
 
 ### Running with Verbose Output
 
@@ -123,40 +147,29 @@ response = dbagent_private(
 )
 ```
 
-## Choosing the Right Model
-
-### OpenAI Models (dbagent)
-- **Pros**: Higher accuracy, better SQL generation
-- **Cons**: Requires internet connection, sends schema information to OpenAI
-
-### Hugging Face Models (dbagent_private)
-- **Pros**: 
-  - Enhanced privacy when run locally
-  - Works offline when using local models
-  - Open-source options available
-- **Cons**: 
-  - May require significant local resources for larger models
-  - Generally less accurate SQL generation than OpenAI models
+## 🔍 Choosing the Right Model
 
 ### Recommended Hugging Face Models
-For optimal results with `dbagent_private`, we recommend:
-- `mistralai/Mixtral-8x7B-Instruct-v0.1` (Best overall performance)
-- `meta-llama/Llama-2-7b-chat-hf` (Good balance of performance and resource usage)
-- `Qwen/Qwen2-7B-Instruct` (Efficient for simpler queries)
 
-## Supported Databases
+| Model | Performance | Resource Usage | Best For |
+|-------|-------------|----------------|----------|
+| **mistralai/Mixtral-8x7B-Instruct-v0.1** | ⭐⭐⭐⭐⭐ | 🖥️🖥️🖥️🖥️ | Best overall SQL generation |
+| **meta-llama/Llama-2-7b-chat-hf** | ⭐⭐⭐⭐ | 🖥️🖥️🖥️ | Balance of performance and resources |
+| **Qwen/Qwen2-7B-Instruct** | ⭐⭐⭐ | 🖥️🖥️ | Efficient for simpler queries |
+
+## 📊 Supported Databases
 
 Currently, NLMDB supports:
 
-- SQLite
+- SQLite ✅
 
 Future releases will add support for:
 
-- PostgreSQL
-- MySQL
-- Microsoft SQL Server
+- PostgreSQL 🔜
+- MySQL 🔜
+- Microsoft SQL Server 🔜
 
-## Requirements
+## ⚙️ Requirements
 
 - Python 3.8+
 - openai>=1.0.0
@@ -165,11 +178,11 @@ Future releases will add support for:
 - langchain-community>=0.0.0
 - langchain-huggingface>=0.0.1 (for Hugging Face integration)
 
-## License
+## 📜 License
 
 MIT
 
-## Contributing
+## 🤝 Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
 
@@ -179,11 +192,20 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
 
-## Acknowledgements
+## 🙏 Acknowledgements
+
+<div align="center">
+  
+[![LangChain](https://img.shields.io/badge/Powered%20by-LangChain-blue)](https://github.com/langchain-ai/langchain)
+[![OpenAI](https://img.shields.io/badge/Supports-OpenAI-lightgrey)](https://openai.com/)
+[![Hugging Face](https://img.shields.io/badge/Supports-Hugging%20Face-yellow)](https://huggingface.co/)
+[![SQLite](https://img.shields.io/badge/Works%20with-SQLite-blue)](https://www.sqlite.org/)
+
+</div>
 
 This library is built on top of:
 
-- LangChain
-- OpenAI API
-- Hugging Face Inference API
-- SQLite
+- [LangChain](https://github.com/langchain-ai/langchain)
+- [OpenAI API](https://openai.com/)
+- [Hugging Face Inference API](https://huggingface.co/)
+- [SQLite](https://www.sqlite.org/)
